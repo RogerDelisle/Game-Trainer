@@ -27,9 +27,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp # \
-#    square.cpp \
-#    gamelogic.cpp
+        mainwindow.cpp \
+        crush.cpp \
+        square.cpp \
+        gamelogic.cpp
+###  These two files are now excluded because source files are #included
+###  in the header files due to the use of templates.
+
 
 HEADERS += \
         mainwindow.h \

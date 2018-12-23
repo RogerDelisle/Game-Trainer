@@ -27,24 +27,6 @@ public:
 
 };
 
-
-template<class UIC, class Owner>
-GT_SQUARE_CLASS::Square(GT_SQUARE_NO sqno, Owner* po, UIC* uie) :
-    mSquareNo(sqno), mState(GT_SQ_STATE_EMPTY), pOwner(po), mUiElement(uie)
-{
-}
-
-template<class UIC, class Owner>
-void GT_SQUARE_CLASS::SetState(GT_SQ_STATE_T st)
-{
-    mState = st;
-    pOwner->SetUIState(st, mUiElement);
-}
-
-template<class UIC, class Owner>
-void GT_SQUARE_CLASS::ShowState(void)
-{
-    pOwner->SetUIState(mState, mUiElement);
-}
+#include "square.cpp"
 
 #endif // SQUARE_H
